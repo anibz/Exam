@@ -1,0 +1,106 @@
+@mixin section-title {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: auto;
+  max-width: 1240px;
+  width: 100%;
+}
+
+@mixin card($bck-col) {
+  max-width: 600px;
+  background-color: $bck-col;
+  border-radius: 45px;
+  height: 310px;
+  padding: 0 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #191a23;
+  box-shadow: 0px 5px 0px $blue;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@mixin button {
+  padding: 20px 35px;
+  background-color: $blue;
+  border-radius: 14px;
+  @extend %text-20;
+  height: 68px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+}
+
+@mixin accordion-card {
+  // display: flex;
+  // align-items: center;
+  background-color: $secondary;
+  max-width: 1240px;
+  margin: auto;
+  padding: 41px 60px;
+  border-radius: 45px;
+  justify-content: space-between;
+  border: 1px solid $blue;
+  box-shadow: 0px 5px 0px $blue;
+  cursor: pointer;
+}
+
+@mixin team-card {
+  .card {
+    padding: 40px 35px;
+    border: 1px solid $blue;
+    box-shadow: 0px 5px 0px $blue;
+    border-radius: 45px;
+    max-width: 387px;
+    height: 354px;
+
+    .card-top {
+      display: flex;
+      // align-items: flex-start;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+      position: relative;
+
+      .person {
+        display: flex;
+        align-items: flex-end;
+        gap: 20px;
+
+        .person-info {
+          h4 {
+            @extend %text-20;
+            font-weight: 500;
+          }
+          h5 {
+            font-size: 16px;
+            line-height: 23px;
+          }
+        }
+      }
+
+      .ln-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    .card-break-line {
+      max-width: 100%;
+      background-color: black;
+      height: 1px;
+      margin: 28px 0;
+    }
+    .card-bottom {
+      p {
+        font-size: 18px;
+        line-height: 23px;
+      }
+    }
+  }
+}
